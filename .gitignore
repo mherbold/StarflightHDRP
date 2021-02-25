@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 # Ignore very large files that can't be pushed to GitHub
 /ArtSource/Moon/*
+/Spacescape/exported/*
