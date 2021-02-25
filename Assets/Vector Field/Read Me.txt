@@ -1,0 +1,22 @@
+You can launch the window from Window > Vector Field Lite
+
+You can create a 3D Texture from scratch
+
+And then create each arrow or duplicate an arrow from
+ Edit > Duplicate Arrow or using the Ctrl+Shift+D shortcut
+And you can create arrows based on selected objects in the
+ scene by using the Selected to Arrows button
+
+When you are happy with the result you can name the texture 
+ and click Apply Arrows and Save button which will create a
+ texture in the Asset folder
+
+There is a tutorial video on Youtube:
+https://www.youtube.com/watch?v=Mh-zh_Hj0V4
+
+This is the free "Lite" version of the asset which is limmited by
+ 15 arrows at a time, and doesn't have the Import feature which gives
+ the ability to import other 3D Textures and modify them
+
+Checkout the Pro version:
+https://assetstore.unity.com/packages/slug/141190
