@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 256 256"
+   xml:space="preserve"
+   sodipodi:docname="AllRound.svg"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\UI\AllRound.png"
+   inkscape:export-xdpi="96.000008"
+   inkscape:export-ydpi="96.000008"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   width="256"
+   height="256"><metadata
+   id="metadata52"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs50" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3440"
+   inkscape:window-height="1387"
+   id="namedview48"
+   showgrid="false"
+   inkscape:zoom="2.8398438"
+   inkscape:cx="97.012385"
+   inkscape:cy="118.1403"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1"
+   inkscape:document-rotation="0" />
+<style
+   type="text/css"
+   id="style43">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:8;stroke-miterlimit:10;}
+</style>
+<path
+   class="st0"
+   d="M 198.61758,251.58077 H 57.38242 c -29.240096,0 -52.9631909,-23.72311 -52.9631909,-52.96319 V 57.382413 c 0,-29.240092 23.7230949,-52.9631839 52.9631909,-52.9631839 h 141.23516 c 29.24011,0 52.96319,23.7230919 52.96319,52.9631839 V 198.61758 c 0,29.24008 -23.72308,52.96319 -52.96319,52.96319 z"
+   id="path45"
+   style="stroke-width:8.83846;stroke-miterlimit:10;stroke-dasharray:none" />
+</svg>

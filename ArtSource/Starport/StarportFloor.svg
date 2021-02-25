@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 2048 2048"
+   style="enable-background:new 0 0 2048 2048;"
+   xml:space="preserve"
+   sodipodi:docname="StarportFloor.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"><metadata
+   id="metadata1040"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs1038">
+	
+	
+	
+
+	
+	
+
+		
+	
+		
+	
+		
+	
+			
+			
+		
+			
+			
+		
+			
+			
+		
+				
+				
+				
+				
+			
+				
+				
+				
+				
+			
+				
+				
+				
+				
+			
+				
+				
+				
+				
+			
+				
+				
+				
+				
+			
+				
+				
+				
+				
+			
+					
+						
+				
+					
+						
+				
+					
+						
+				
+					
+						
+				
+					
+				
+					
+						
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						
+				
+					
+						
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3440"
+   inkscape:window-height="1387"
+   id="namedview1036"
+   showgrid="false"
+   inkscape:zoom="0.35498047"
+   inkscape:cx="1907.1472"
+   inkscape:cy="1091.6094"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style875">
+	.st0{fill:#6FCCDD;}
+	.st1{display:none;}
+	.st2{display:inline;fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st3{display:inline;fill:none;stroke:#000000;stroke-width:0.65;stroke-miterlimit:10;}
+	.st4{fill:#3D54A5;}
+	.st5{fill:none;stroke:#3D54A5;stroke-width:11.05;stroke-miterlimit:10;}
+	.st6{fill:#505150;}
+</style>
+<rect
+   class="st0"
+   width="2048"
+   height="2048"
+   id="rect877"
+   style="fill:#55ffff;fill-opacity:1" />
+
+
+<path
+   class="st4"
+   d="m 1024,199.5 95.6,324.5 c 36.5,124.1 164,197.6 289.7,167.3 l 328.8,-79.5 -233.3,245 c -89.2,93.7 -89.2,240.8 0,334.5 l 233.3,245 -328.8,-79.5 c -125.7,-30.4 -253.2,43.2 -289.7,167.3 L 1024,1848.6 928.4,1524 c -36.5,-124.1 -164,-197.6 -289.7,-167.3 l -328.8,79.5 233.3,-245 c 89.2,-93.7 89.2,-240.8 0,-334.5 l -233.3,-245 328.8,79.5 C 764.4,721.6 891.9,648 928.4,523.9 Z"
+   id="path907"
+   style="fill:#5555ff;fill-opacity:1" /><path
+   class="st5"
+   d="m 918.9,498.7 88.6,-320.5 c 8.2,-11 24.7,-11 33,0 l 88.6,320.5 c 35.6,128.8 167.9,205.2 297.3,171.6 l 321.8,-83.5 c 13.7,1.6 21.9,15.9 16.5,28.5 l -233.3,237 c -93.7,95.2 -93.7,248 0,343.3 l 233.3,237 c 5.5,12.6 -2.8,27 -16.5,28.5 l -321.8,-83.5 c -129.3,-33.6 -261.7,42.8 -297.3,171.6 l -88.6,320.5 c -8.2,11 -24.7,11 -33,0 L 918.9,1549.2 C 883.3,1420.4 751,1344 621.6,1377.6 l -321.8,83.5 c -13.7,-1.6 -21.9,-15.9 -16.5,-28.5 l 233.3,-237 c 93.7,-95.2 93.7,-248 0,-343.3 l -233.3,-237 c -5.5,-12.6 2.8,-27 16.5,-28.5 l 321.8,83.5 C 751,703.9 883.3,627.5 918.9,498.7 Z"
+   id="path909"
+   style="stroke:#5555ff;stroke-opacity:1" />
+<rect
+   x="-574.1604"
+   y="1298.8196"
+   transform="rotate(-30.000728)"
+   class="st6"
+   width="24.999451"
+   height="199.99561"
+   id="rect913"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="-599.20923"
+   y="1298.8193"
+   transform="rotate(-30.000728)"
+   class="st4"
+   width="24.999451"
+   height="199.99561"
+   id="rect917"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="-624.1579"
+   y="1298.819"
+   transform="rotate(-30.000728)"
+   class="st6"
+   width="24.999451"
+   height="199.99561"
+   id="rect921"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="-649.2066"
+   y="1298.8186"
+   transform="rotate(-30.000728)"
+   class="st4"
+   width="24.999451"
+   height="199.99561"
+   id="rect925"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="1298.7264"
+   y="1298.8434"
+   transform="rotate(-30.000728)"
+   class="st6"
+   width="24.999451"
+   height="199.99561"
+   id="rect931"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="1323.7751"
+   y="1298.8436"
+   transform="rotate(-30.000728)"
+   class="st4"
+   width="24.999451"
+   height="199.99561"
+   id="rect935"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="1348.7239"
+   y="1298.8439"
+   transform="rotate(-30.000728)"
+   class="st6"
+   width="24.999451"
+   height="199.99561"
+   id="rect939"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="1373.7726"
+   y="1298.8442"
+   transform="rotate(-30.000728)"
+   class="st4"
+   width="24.999451"
+   height="199.99561"
+   id="rect943"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="-474.78088"
+   y="449.85553"
+   transform="rotate(-59.999272)"
+   class="st6"
+   width="199.99561"
+   height="24.999451"
+   id="rect953"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="-474.82993"
+   y="424.85553"
+   transform="rotate(-59.999272)"
+   class="st4"
+   width="199.99561"
+   height="24.999451"
+   id="rect957"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="-474.77896"
+   y="399.85553"
+   transform="rotate(-59.999272)"
+   class="st6"
+   width="199.99561"
+   height="24.999451"
+   id="rect961"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="-474.82803"
+   y="374.85553"
+   transform="rotate(-59.999272)"
+   class="st4"
+   width="199.99561"
+   height="24.999451"
+   id="rect965"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="-474.87033"
+   y="2322.8557"
+   transform="rotate(-59.999272)"
+   class="st6"
+   width="199.99561"
+   height="24.999451"
+   id="rect971"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="-474.82135"
+   y="2347.8557"
+   transform="rotate(-59.999272)"
+   class="st4"
+   width="199.99561"
+   height="24.999451"
+   id="rect975"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="-474.87219"
+   y="2372.8557"
+   transform="rotate(-59.999272)"
+   class="st6"
+   width="199.99561"
+   height="24.999451"
+   id="rect979"
+   style="stroke-width:0.999978;fill:#555555;fill-opacity:1" /><rect
+   x="-474.82318"
+   y="2397.8557"
+   transform="rotate(-59.999272)"
+   class="st4"
+   width="199.99561"
+   height="24.999451"
+   id="rect983"
+   style="stroke-width:0.999978;fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="924"
+   y="75"
+   class="st6"
+   width="200"
+   height="25"
+   id="rect993"
+   style="fill:#555555;fill-opacity:1" /><rect
+   x="924"
+   y="50"
+   class="st4"
+   width="200"
+   height="25"
+   id="rect997"
+   style="fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="924"
+   y="25"
+   class="st6"
+   width="200"
+   height="25"
+   id="rect1001"
+   style="fill:#555555;fill-opacity:1" /><rect
+   x="924"
+   class="st4"
+   width="200"
+   height="25"
+   id="rect1005"
+   y="0"
+   style="fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="924"
+   y="1948"
+   class="st6"
+   width="200"
+   height="25"
+   id="rect1011"
+   style="fill:#555555;fill-opacity:1" /><rect
+   x="924"
+   y="1973"
+   class="st4"
+   width="200"
+   height="25"
+   id="rect1015"
+   style="fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" /><rect
+   x="924"
+   y="1998"
+   class="st6"
+   width="200"
+   height="25"
+   id="rect1019"
+   style="fill:#555555;fill-opacity:1" /><rect
+   x="924"
+   y="2023"
+   class="st4"
+   width="200"
+   height="25"
+   id="rect1023"
+   style="fill:#5555ff;fill-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Starport\StarportFloor.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96" />
+</svg>
