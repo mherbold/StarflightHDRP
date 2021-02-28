@@ -13,6 +13,8 @@ public class StarportCamera : MonoBehaviour
 	[SerializeField] float m_zoomedFieldOfView = 15.0f;
 	[SerializeField] float m_fieldOfViewTransitionLerpFactor = 2.0f;
 
+	[SerializeField] float m_objecToTrackPositionLerpFactor = 1.0f;
+
 	[SerializeField] float m_angleAccelerationLerpFactor = 1.0f;
 	[SerializeField] float m_maximumAngleSpeed = 30.0f;
 
@@ -20,6 +22,13 @@ public class StarportCamera : MonoBehaviour
 	float m_targetAngle = 0.0f;
 
 	float m_currentAngleSpeed = 0.0f;
+
+	Vector3 m_objectToTrackPosition;
+
+	void OnEnable()
+	{
+		m_objectToTrackPosition = m_objectToTrack.position;
+	}
 
 	void Update()
 	{
@@ -59,7 +68,9 @@ public class StarportCamera : MonoBehaviour
 
 		m_camera.fieldOfView = Mathf.Lerp( m_camera.fieldOfView, targetFieldOfView, Time.deltaTime * m_fieldOfViewTransitionLerpFactor );
 
-		m_camera.transform.rotation = Quaternion.LookRotation( m_objectToTrack.position - m_camera.transform.position );
+		m_objectToTrackPosition = Vector3.Lerp( m_objectToTrackPosition, m_objectToTrack.position, Time.deltaTime * m_objecToTrackPositionLerpFactor );
+
+		m_camera.transform.rotation = Quaternion.LookRotation( m_objectToTrackPosition - m_camera.transform.position );
 	}
 
 	public float GetCurrentAngle()

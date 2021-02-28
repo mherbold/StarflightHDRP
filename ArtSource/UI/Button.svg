@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 512 512"
+   style="enable-background:new 0 0 512 512;"
+   xml:space="preserve"
+   sodipodi:docname="Button.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\UI\ButtonActive.png"
+   inkscape:export-xdpi="48.000004"
+   inkscape:export-ydpi="48.000004"
+   inkscape:label="ButtonOff"><metadata
+   id="metadata879"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs877" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3440"
+   inkscape:window-height="1387"
+   id="namedview875"
+   showgrid="false"
+   inkscape:zoom="1.3339844"
+   inkscape:cx="144.30454"
+   inkscape:cy="256"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style860">
+	.st0{fill:#00FFF8;stroke:#0000AA;stroke-width:32;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#0000AA;stroke-width:32;stroke-miterlimit:10;}
+	.st2{stroke:#0000AA;stroke-width:32;stroke-miterlimit:10;}
+</style>
+<circle
+   class="st0"
+   cx="256"
+   cy="256"
+   r="178.3"
+   id="ButtonActive"
+   style="display:inline;fill:#55ffff;fill-opacity:1;stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="ButtonActive" /><circle
+   class="st0"
+   cx="256"
+   cy="256"
+   r="178.3"
+   id="ButtonSelected"
+   style="display:none;fill:#55ffff;fill-opacity:1;stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="ButtonSelected" /><circle
+   class="st0"
+   cx="256"
+   cy="256"
+   r="178.3"
+   id="ButtonOff"
+   style="display:none;fill:#000000;fill-opacity:1;stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="ButtonOff" />
+<line
+   class="st1"
+   x1="256"
+   y1="256"
+   x2="382.1"
+   y2="382.1"
+   id="LowerRightLine"
+   style="stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="LowerRightLine" />
+<line
+   class="st1"
+   x1="129.9"
+   y1="129.9"
+   x2="256"
+   y2="256"
+   id="UpperLeftLine"
+   style="stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="UpperLeftLine" />
+<line
+   class="st1"
+   x1="256"
+   y1="256"
+   x2="382.1"
+   y2="129.9"
+   id="UpperRightLine"
+   style="stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="UpperRightLine" />
+<line
+   class="st1"
+   x1="129.9"
+   y1="382.1"
+   x2="256"
+   y2="256"
+   id="LowerLeftLine"
+   style="stroke:#0000aa;stroke-opacity:1;fill:none;fill-opacity:1"
+   inkscape:label="LowerLeftLine" />
+<circle
+   class="st2"
+   cx="256"
+   cy="256"
+   r="96.199997"
+   id="ButtonCenterActive"
+   style="display:inline;fill:#55ffff;fill-opacity:1;stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="ButtonCenterActive" />
+<circle
+   class="st2"
+   cx="256"
+   cy="256"
+   r="96.199997"
+   id="circle885"
+   style="display:none;fill:#000000;fill-opacity:1;stroke:#0000aa;stroke-opacity:1"
+   inkscape:label="ButtonCenterOff" /></svg>
