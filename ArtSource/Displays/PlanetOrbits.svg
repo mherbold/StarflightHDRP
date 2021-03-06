@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 512 512"
+   style="enable-background:new 0 0 512 512;"
+   xml:space="preserve"
+   sodipodi:docname="PlanetOrbits.svg"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\ArtSource\Displays\Arth.png"
+   inkscape:export-xdpi="96.000008"
+   inkscape:export-ydpi="96.000008"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"><metadata
+   id="metadata905"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs903" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3440"
+   inkscape:window-height="1387"
+   id="namedview901"
+   showgrid="false"
+   inkscape:zoom="2.5769645"
+   inkscape:cx="256"
+   inkscape:cy="250.75"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style870">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#ABABAB;stroke-width:4;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;stroke:#ABABAB;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<circle
+   id="Sun"
+   class="st0"
+   cx="256"
+   cy="256"
+   r="12"
+   style="display:none;stroke:none;stroke-opacity:1"
+   inkscape:export-filename="C:\Users\marvi\Documents\GitHub\StarflightHDRP\Assets\Art\Textures\Displays\System\Sun.png"
+   inkscape:export-xdpi="128"
+   inkscape:export-ydpi="128" />
+<circle
+   id="_x31_"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="50"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring1"
+   inkscape:export-xdpi="96.000008"
+   inkscape:export-ydpi="96.000008" />
+<circle
+   class="st2"
+   cx="256"
+   cy="206"
+   r="12"
+   id="Planet1"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet1" />
+<circle
+   id="Ring2"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="75"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring2" />
+<circle
+   class="st2"
+   cx="256"
+   cy="181"
+   r="12"
+   id="Planet2"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet2" />
+<circle
+   id="Ring3"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="100"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring3" />
+<path
+   id="Arth"
+   class="st2"
+   d="m 268,156 c 0,6.6 -5.4,12 -12,12 -6.6,0 -12,-5.4 -12,-12 0,-6.6 5.4,-12 12,-12 6.6,0 12,5.4 12,12 z m -12,-8 c -4.4,0 -8,3.6 -8,8 0,4.4 3.6,8 8,8 4.4,0 8,-3.6 8,-8 0,-4.4 -3.6,-8 -8,-8 z"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Arth" />
+<circle
+   class="st2"
+   cx="256"
+   cy="156"
+   r="12"
+   id="Planet3"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet3" />
+<circle
+   id="Ring4"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="125"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring4" />
+<circle
+   class="st2"
+   cx="256"
+   cy="131"
+   r="12"
+   id="Planet4"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet4" />
+<circle
+   id="Ring5"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="150"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring5" />
+<circle
+   class="st2"
+   cx="256"
+   cy="106"
+   r="12"
+   id="Planet5"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet5" />
+<circle
+   id="Ring6"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="175"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring6" />
+<circle
+   class="st2"
+   cx="256"
+   cy="81"
+   r="12"
+   id="Planet6"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet6" />
+<circle
+   id="Ring7"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="200"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring7" />
+<circle
+   class="st2"
+   cx="256"
+   cy="56"
+   r="12"
+   id="Planet7"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet7" />
+<circle
+   id="Ring8"
+   class="st1"
+   cx="256"
+   cy="256"
+   r="225"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Ring8" />
+<circle
+   class="st2"
+   cx="256"
+   cy="31"
+   r="12"
+   id="Planet8"
+   style="display:none;stroke:#aaaaaa;stroke-opacity:1"
+   inkscape:label="Planet8" />
+<circle
+   class="st3"
+   cx="450"
+   cy="450"
+   r="5"
+   id="Ship"
+   style="display:inline;stroke:#000000;stroke-opacity:1"
+   inkscape:label="Ship"
+   inkscape:export-xdpi="279.27274"
+   inkscape:export-ydpi="279.27274" />
+</svg>
