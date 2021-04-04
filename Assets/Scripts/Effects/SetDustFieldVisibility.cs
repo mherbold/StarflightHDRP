@@ -16,9 +16,16 @@ public class SetDustFieldVisibility : MonoBehaviour
 	Vector3 m_lastCameraPosition;
 	float m_cameraSpeed;
 
+	void Awake()
+	{
+		Debug.Log( "SetDustFieldVisibility Awake" );
+
+		m_visualEffect = GetComponent<VisualEffect>();
+	}
+
 	void OnEnable()
 	{
-		m_visualEffect = GetComponent<VisualEffect>();
+		Debug.Log( "SetDustFieldVisibility OnEnable" );
 
 		m_lastCameraPosition = m_camera.transform.position;
 		m_cameraSpeed = 0.0f;

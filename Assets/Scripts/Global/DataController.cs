@@ -13,7 +13,6 @@ public class DataController : MonoBehaviour
 
 	// static reference to this instance
 	public static DataController m_instance;
-	//public static string m_sceneToLoad = "Intro";
 
 	// the name of the game data file
 	public string m_gameDataFileName;
@@ -39,6 +38,8 @@ public class DataController : MonoBehaviour
 	// unity awake
 	void Awake()
 	{
+		UnityEngine.Debug.Log( "DataController Awake" );
+
 		// remember this instance to this
 		m_instance = this;
 
@@ -47,12 +48,6 @@ public class DataController : MonoBehaviour
 
 		// load the save game slots
 		LoadPlayerDataList();
-
-		// debug info
-		//UnityEngine.Debug.Log( "Loading scene " + m_sceneToLoad );
-
-		// load the next scene
-		//SceneManager.LoadScene( m_sceneToLoad );
 	}
 
 	// unity late update
@@ -81,15 +76,6 @@ public class DataController : MonoBehaviour
 
 			// save the active game
 			SaveActiveGame();
-
-			// figure out which scene to load (based on the player location in the save data)
-			//var nextSceneName = GetCurrentSceneName();
-
-			// debug info
-			//UnityEngine.Debug.Log( "Loading scene " + nextSceneName );
-
-			// load the next scene
-			//SceneManager.LoadScene( nextSceneName );
 		}
 	}
 
@@ -235,27 +221,7 @@ public class DataController : MonoBehaviour
 			UnityEngine.Debug.Log( "Saving player data failed - " + exception.Message );
 		}
 	}
-	/*
-	// call this to get the name of the current scene for the active save game slot
-	public string GetCurrentSceneName()
-	{
-		// figure out what the current scene is
-		switch ( m_playerData.m_general.m_location )
-		{
-			case PD_General.Location.DockingBay:
-			case PD_General.Location.Hyperspace:
-			case PD_General.Location.InOrbit:
-			case PD_General.Location.Planetside:
-			case PD_General.Location.JustLaunched:
-			case PD_General.Location.StarSystem:
-			case PD_General.Location.Encounter:
-				return "Spaceflight";
 
-			default:
-				return "Starport";
-		}
-	}
-	*/
 	// call this to change the target save game slot number
 	public void SetTargetSaveGameSlotNumber( int targetSaveGameSlotNumber )
 	{
@@ -293,14 +259,5 @@ public class DataController : MonoBehaviour
 
 		// save the active game (with freshly reset data)
 		SaveActiveGame();
-
-		// figure out which scene to load (based on the player location in the save data)
-		//var nextSceneName = GetCurrentSceneName();
-
-		// debug info
-		//UnityEngine.Debug.Log( "Loading scene " + nextSceneName );
-
-		// load the next scene
-		//SceneManager.LoadScene( nextSceneName );
 	}
 }

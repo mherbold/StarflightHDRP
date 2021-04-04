@@ -146,7 +146,7 @@ public class ShipConfiguration : DoorPanelController
 			if ( m_name.Length == 0 )
 			{
 				// buzz
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 			else
 			{
@@ -156,7 +156,7 @@ public class ShipConfiguration : DoorPanelController
 				// update the ship name in the player data
 				DataController.m_instance.m_playerData.m_playerShip.m_name = m_name;
 				// play a ui sound
-				PlayUpdateSound();
+				Sounds.m_instance.PlayUpdate();
 
 				// switch to the menu bar state
 				SwitchToMenuBarState( false );
@@ -170,7 +170,7 @@ public class ShipConfiguration : DoorPanelController
 			}
 			else
 			{
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 		else if ( ( ch >= (char) KeyCode.Space ) && ( ch <= (char) KeyCode.Tilde ) )
@@ -181,12 +181,12 @@ public class ShipConfiguration : DoorPanelController
 			}
 			else
 			{
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 		else
 		{
-			PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 
 		m_nameInputTMP.text = m_name;
@@ -222,7 +222,7 @@ public class ShipConfiguration : DoorPanelController
 		// beep
 		if ( makeNoise )
 		{
-			PlayDeactivateSound();
+			Sounds.m_instance.PlayDeactivate();
 		}
 	}
 
@@ -261,7 +261,7 @@ public class ShipConfiguration : DoorPanelController
 		// beep
 		if ( resetCurrentPartIndex )
 		{
-			PlayActivateSound();
+			Sounds.m_instance.PlayActivate();
 		}
 	}
 
@@ -297,7 +297,7 @@ public class ShipConfiguration : DoorPanelController
 		// beep
 		if ( resetCurrentPartIndex )
 		{
-			PlayActivateSound();
+			Sounds.m_instance.PlayActivate();
 		}
 	}
 
@@ -322,7 +322,7 @@ public class ShipConfiguration : DoorPanelController
 		EnableButton( c_exitButtonIndex, false );
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 
 		// read input from any key on the keyboard
 		SetInputFocus( true );
@@ -366,7 +366,7 @@ public class ShipConfiguration : DoorPanelController
 		SetCurrentButton( c_dismissButtonIndex, false );
 
 		// play a ui sound
-		PlayErrorSound();
+		Sounds.m_instance.PlayError();
 	}
 
 	void SwitchToPreviousState()
@@ -406,7 +406,7 @@ public class ShipConfiguration : DoorPanelController
 				break;
 		}
 
-		PlayDeactivateSound();
+		Sounds.m_instance.PlayDeactivate();
 	}
 
 	// update screen for the buy part state
@@ -786,7 +786,7 @@ public class ShipConfiguration : DoorPanelController
 			SwitchToBuyPartState( false );
 
 			// play a ui sound
-			PlayUpdateSound();
+			Sounds.m_instance.PlayUpdate();
 		}
 	}
 
@@ -857,12 +857,12 @@ public class ShipConfiguration : DoorPanelController
 				UpdateScreenForBuyOrSellPartState();
 
 				// play a ui sound
-				PlayUpdateSound();
+				Sounds.m_instance.PlayUpdate();
 			}
 			else
 			{
 				// buzz
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 	}
@@ -902,7 +902,7 @@ public class ShipConfiguration : DoorPanelController
 				UpdateInformationPanels();
 
 				// play a ui sound
-				PlayUpdateSound();
+				Sounds.m_instance.PlayUpdate();
 			}
 		}
 	}
@@ -940,13 +940,13 @@ public class ShipConfiguration : DoorPanelController
 				UpdateInformationPanels();
 
 				// play a ui sound
-				PlayUpdateSound();
+				Sounds.m_instance.PlayUpdate();
 			}
 		}
 		else
 		{
 			// buzz
-			PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 	}
 

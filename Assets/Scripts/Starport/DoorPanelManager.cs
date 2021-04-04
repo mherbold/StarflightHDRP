@@ -7,28 +7,31 @@ public class DoorPanelManager : MonoBehaviour
 {
 	[SerializeField] PlayableDirector m_panelSlideInTimeline;
 	[SerializeField] PlayableDirector m_panelSlideOutTimeline;
-	[SerializeField] Astronaut m_astronaut;
-
-	[SerializeField] AudioSource m_clickAudioSource;
-	[SerializeField] AudioSource m_activateAudioSource;
-	[SerializeField] AudioSource m_deactivateAudioSource;
-	[SerializeField] AudioSource m_errorAudioSource;
-	[SerializeField] AudioSource m_updateAudioSource;
 
 	[SerializeField] float m_debounceTime = 0.25f;
 
-	DoorPanelController m_currentDoorPanel;
+	DoorPanelController m_currentDoorPanelController;
 
 	bool m_panelIsVisible = false;
-	bool m_inputHasFocus = false;
-	bool m_ignoreInputThisFrame = false;
+	bool m_textInputEnabled = false;
+	bool m_ignoreTextInputThisFrame = false;
 
 	Vector2 m_moveVector;
-
 	float m_nextMoveTime;
+
+	public static DoorPanelManager m_instance;
+
+	void Awake()
+	{
+		Debug.Log( "DoorPanelManager Awake" );
+
+		m_instance = this;
+	}
 
 	void OnEnable()
 	{
+		Debug.Log( "DoorPanelManager OnEnable" );
+
 		foreach ( Transform childTransform in transform )
 		{
 			childTransform.gameObject.SetActive( false );
@@ -57,40 +60,61 @@ public class DoorPanelManager : MonoBehaviour
 
 				if ( x < 0 )
 				{
-					m_currentDoorPanel.OnLeft();
+					m_currentDoorPanelController.OnLeft();
 				}
 				else if ( x > 0 )
 				{
-					m_currentDoorPanel.OnRight();
+					m_currentDoorPanelController.OnRight();
 				}
 				else if ( y > 0 )
 				{
-					m_currentDoorPanel.OnUp();
+					m_currentDoorPanelController.OnUp();
 				}
 				else if ( y < 0 )
 				{
-					m_currentDoorPanel.OnDown();
+					m_currentDoorPanelController.OnDown();
 				}
 			}
 		}
 
-		m_ignoreInputThisFrame = false;
+		m_ignoreTextInputThisFrame = false;
 	}
 
-	public void SetCurrentDoorPanel( DoorPanelController doorPanelController )
+	public void SetCurrentDoorPanelController( DoorPanelController doorPanelController )
 	{
-		if ( m_currentDoorPanel )
+		if ( m_currentDoorPanelController )
 		{
-			m_currentDoorPanel.gameObject.SetActive( false );
+			m_currentDoorPanelController.gameObject.SetActive( false );
 		}
 
-		m_currentDoorPanel = doorPanelController;
+		m_currentDoorPanelController = doorPanelController;
 
-		if ( m_panelIsVisible && ( m_currentDoorPanel == null ) )
+		if ( m_currentDoorPanelController == null )
 		{
-			m_panelIsVisible = false;
+			if ( m_panelIsVisible )
+			{
+				m_panelIsVisible = false;
 
-			m_astronaut.SetInputActive( true );
+				Astronaut.m_instance.Freeze( false );
+			}
+		}
+	}
+
+	public void OpenPanel()
+	{
+		if ( m_currentDoorPanelController != null )
+		{
+			m_currentDoorPanelController.gameObject.SetActive( true );
+
+			m_panelSlideOutTimeline.Stop();
+			m_panelSlideInTimeline.Stop();
+			m_panelSlideInTimeline.Play();
+
+			m_panelIsVisible = true;
+
+			Astronaut.m_instance.Freeze( true );
+
+			Input.m_instance.SwitchToActionMap( "Starport Door Panel" );
 		}
 	}
 
@@ -102,17 +126,19 @@ public class DoorPanelManager : MonoBehaviour
 
 		m_panelIsVisible = false;
 
-		m_astronaut.SetInputActive( true );
+		Astronaut.m_instance.Freeze( false );
 
 		DataController.m_instance.SaveActiveGame();
+
+		Input.m_instance.SwitchToActionMap( "Starport Astronaut" );
 	}
 
-	public void SetInputFocus( bool inputHasFocus )
+	public void EnableTextInput( bool enabled )
 	{
-		m_inputHasFocus = inputHasFocus;
-		m_ignoreInputThisFrame = true;
+		m_textInputEnabled = enabled;
+		m_ignoreTextInputThisFrame = true;
 
-		if ( m_inputHasFocus )
+		if ( m_textInputEnabled )
 		{
 			Keyboard.current.onTextInput += OnTextInput;
 		}
@@ -124,7 +150,7 @@ public class DoorPanelManager : MonoBehaviour
 
 	public void OnMove( InputAction.CallbackContext context )
 	{
-		if ( !m_inputHasFocus )
+		if ( !m_textInputEnabled )
 		{
 			m_moveVector = context.ReadValue<Vector2>();
 		}
@@ -132,27 +158,15 @@ public class DoorPanelManager : MonoBehaviour
 
 	public void OnFire( InputAction.CallbackContext context )
 	{
-		if ( !m_inputHasFocus )
+		if ( !context.canceled && context.action.triggered )
 		{
-			if ( context.action.triggered )
+			if ( !m_textInputEnabled )
 			{
-				if ( m_currentDoorPanel )
+				if ( m_currentDoorPanelController )
 				{
 					if ( m_panelIsVisible )
 					{
-						m_currentDoorPanel.OnFire();
-					}
-					else
-					{
-						m_currentDoorPanel.gameObject.SetActive( true );
-
-						m_panelSlideOutTimeline.Stop();
-						m_panelSlideInTimeline.Stop();
-						m_panelSlideInTimeline.Play();
-
-						m_panelIsVisible = true;
-
-						m_astronaut.SetInputActive( false );
+						m_currentDoorPanelController.OnFire();
 					}
 				}
 			}
@@ -161,13 +175,16 @@ public class DoorPanelManager : MonoBehaviour
 
 	public void OnCancel( InputAction.CallbackContext context )
 	{
-		if ( !m_inputHasFocus )
+		if ( !context.canceled && context.action.triggered )
 		{
-			if ( context.action.triggered )
+			if ( !m_textInputEnabled )
 			{
-				if ( m_panelIsVisible )
+				if ( m_currentDoorPanelController )
 				{
-					m_currentDoorPanel.OnCancel();
+					if ( m_panelIsVisible )
+					{
+						m_currentDoorPanelController.OnCancel();
+					}
 				}
 			}
 		}
@@ -175,44 +192,9 @@ public class DoorPanelManager : MonoBehaviour
 
 	public void OnTextInput( char ch )
 	{
-		if ( m_inputHasFocus && !m_ignoreInputThisFrame )
+		if ( m_textInputEnabled && !m_ignoreTextInputThisFrame )
 		{
-			m_currentDoorPanel.OnTextInput( ch );
+			m_currentDoorPanelController.OnTextInput( ch );
 		}
-	}
-
-	public void PlayClickSound()
-	{
-		Debug.Log( "** click **" );
-
-		m_clickAudioSource.Play();
-	}
-
-	public void PlayActivateSound()
-	{
-		Debug.Log( "** activate **" );
-
-		m_activateAudioSource.Play();
-	}
-
-	public void PlayDeactivateSound()
-	{
-		Debug.Log( "** deactivate **" );
-
-		m_deactivateAudioSource.Play();
-	}
-
-	public void PlayErrorSound()
-	{
-		Debug.Log( "** error **" );
-
-		m_errorAudioSource.Play();
-	}
-
-	public void PlayUpdateSound()
-	{
-		Debug.Log( "** update **" );
-
-		m_updateAudioSource.Play();
 	}
 }

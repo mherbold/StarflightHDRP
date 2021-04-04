@@ -9,8 +9,10 @@ public class TimelineLooper : MonoBehaviour
 
 	PlayableDirector m_playableDirector;
 
-	void OnEnable()
+	void Awake()
 	{
+		Debug.Log( "TimelineLooper Awake" );
+
 		m_playableDirector = GetComponent<PlayableDirector>();
 	}
 

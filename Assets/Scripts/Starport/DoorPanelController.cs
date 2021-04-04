@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class DoorPanelController : MonoBehaviour
 {
-	[SerializeField] DoorPanelManager m_doorPanelManager;
 	[SerializeField] GameObject[] m_pages;
 	[SerializeField] PanelButton[] m_buttons;
 
@@ -14,6 +13,8 @@ public class DoorPanelController : MonoBehaviour
 
 	void OnEnable()
 	{
+		Debug.Log( "DoorPanelController OnEnable" );
+
 		if ( !m_initialized )
 		{
 			Initialize();
@@ -26,12 +27,12 @@ public class DoorPanelController : MonoBehaviour
 
 	public void SetCurrentDoorPanel()
 	{
-		m_doorPanelManager.SetCurrentDoorPanel( this );
+		DoorPanelManager.m_instance.SetCurrentDoorPanelController( this );
 	}
 
 	public void UnsetCurrentDoorPanel()
 	{
-		m_doorPanelManager.SetCurrentDoorPanel( null );
+		DoorPanelManager.m_instance.SetCurrentDoorPanelController( null );
 	}
 
 	public void SetCurrentPage( int pageIndex, bool makeNoise = true, bool playDeactivateSoundInstead = false )
@@ -49,11 +50,11 @@ public class DoorPanelController : MonoBehaviour
 		{
 			if ( playDeactivateSoundInstead )
 			{
-				PlayDeactivateSound();
+				Sounds.m_instance.PlayDeactivate();
 			}
 			else
 			{
-				PlayActivateSound();
+				Sounds.m_instance.PlayActivate();
 			}
 		}
 	}
@@ -95,7 +96,7 @@ public class DoorPanelController : MonoBehaviour
 
 		if ( makeNoise )
 		{
-			m_doorPanelManager.PlayClickSound();
+			Sounds.m_instance.PlayClick();
 		}
 	}
 
@@ -145,34 +146,14 @@ public class DoorPanelController : MonoBehaviour
 		return m_buttons[ buttonIndex ].m_enabled;
 	}
 
-	public void PlayUpdateSound()
-	{
-		m_doorPanelManager.PlayUpdateSound();
-	}
-
-	public void PlayActivateSound()
-	{
-		m_doorPanelManager.PlayActivateSound();
-	}
-
-	public void PlayDeactivateSound()
-	{
-		m_doorPanelManager.PlayDeactivateSound();
-	}
-
-	public void PlayErrorSound()
-	{
-		m_doorPanelManager.PlayErrorSound();
-	}
-
 	protected void SetInputFocus( bool inputHasFocus )
 	{
-		m_doorPanelManager.SetInputFocus( inputHasFocus );
+		DoorPanelManager.m_instance.EnableTextInput( inputHasFocus );
 	}
 
 	protected void Exit()
 	{
-		m_doorPanelManager.ClosePanel();
+		DoorPanelManager.m_instance.ClosePanel();
 	}
 
 	protected virtual void Initialize()
@@ -214,7 +195,7 @@ public class DoorPanelController : MonoBehaviour
 
 		if ( buttonIndex == -1 )
 		{
-			m_doorPanelManager.PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 		else
 		{
@@ -239,7 +220,7 @@ public class DoorPanelController : MonoBehaviour
 
 		if ( buttonIndex == -1 )
 		{
-			m_doorPanelManager.PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 		else
 		{
@@ -264,7 +245,7 @@ public class DoorPanelController : MonoBehaviour
 
 		if ( buttonIndex == -1 )
 		{
-			m_doorPanelManager.PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 		else
 		{
@@ -289,7 +270,7 @@ public class DoorPanelController : MonoBehaviour
 
 		if ( buttonIndex == -1 )
 		{
-			m_doorPanelManager.PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 		else
 		{

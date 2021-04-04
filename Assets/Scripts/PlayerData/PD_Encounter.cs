@@ -12,7 +12,7 @@ public class PD_Encounter : IComparable
 
 	public int m_encounterId { get; private set; }
 	GD_Encounter m_encounter;
-	PD_General.Location m_location;
+	PD_General.Activity m_location;
 	int m_starId;
 	Vector3 m_homeCoordinates;
 	public Vector3 m_currentCoordinates { get; private set; }
@@ -52,12 +52,12 @@ public class PD_Encounter : IComparable
 		// set the location (translated)
 		switch ( m_encounter.m_location )
 		{
-			case 0: m_location = PD_General.Location.Hyperspace; break;
-			case 1: m_location = PD_General.Location.StarSystem; break;
-			case 2: m_location = PD_General.Location.InOrbit; break;
+			case 0: m_location = PD_General.Activity.Hyperspace; break;
+			case 1: m_location = PD_General.Activity.StarSystem; break;
+			case 2: m_location = PD_General.Activity.InOrbit; break;
 		}
 
-		if ( m_location != PD_General.Location.Hyperspace )
+		if ( m_location != PD_General.Activity.Hyperspace )
 		{
 			foreach ( var star in gameData.m_starList )
 			{
@@ -73,11 +73,11 @@ public class PD_Encounter : IComparable
 		}
 
 		// set the home position
-		if ( m_location == PD_General.Location.Hyperspace )
+		if ( m_location == PD_General.Activity.Hyperspace )
 		{
 			m_homeCoordinates = Tools.GameToWorldCoordinates( new Vector3( m_encounter.m_xCoordinate, 0.0f, m_encounter.m_yCoordinate ) );
 		}
-		else if ( m_location == PD_General.Location.StarSystem )
+		else if ( m_location == PD_General.Activity.StarSystem )
 		{
 			var randomPosition = UnityEngine.Random.insideUnitCircle * ( 8192.0f - 512.0f );
 
@@ -110,7 +110,7 @@ public class PD_Encounter : IComparable
 		m_currentDistance = float.MaxValue;
 	}
 
-	public PD_General.Location GetLocation()
+	public PD_General.Activity GetLocation()
 	{
 		return m_location;
 	}
@@ -164,7 +164,7 @@ public class PD_Encounter : IComparable
 	public void MoveTowards( Vector3 coordinates )
 	{
 		// get the move speed
-		var moveSpeed = ( m_location == PD_General.Location.Hyperspace ) ? c_alienHyperspaceMoveSpeed : c_alienStarSystemMoveSpeed;
+		var moveSpeed = ( m_location == PD_General.Activity.Hyperspace ) ? c_alienHyperspaceMoveSpeed : c_alienStarSystemMoveSpeed;
 
 		// go torwards given coordinates
 		m_currentCoordinates += Vector3.Normalize( coordinates - m_currentCoordinates ) * Time.deltaTime * moveSpeed;

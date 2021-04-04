@@ -7,7 +7,7 @@ using System.Collections.Generic;
 [Serializable]
 public class PD_General
 {
-	public enum Location
+	public enum Activity
 	{
 		Starport,
 		DockingBay,
@@ -20,16 +20,16 @@ public class PD_General
 		Disembarked,
 	}
 
-	// the player location
-	public Location m_location;
+	// the player activity
+	public Activity m_activity;
 
 	// the last player location
-	public Location m_lastLocation;
+	public Activity m_lastActivity;
 
 	// the player coordinates
 	public Vector3 m_coordinates;
 
-	// the last known coordinates for various locations
+	// the last known coordinates for various activities
 	public Vector3 m_lastStarportCoordinates;
 	public Vector3 m_lastHyperspaceCoordinates;
 	public Vector3 m_lastStarSystemCoordinates;
@@ -85,8 +85,8 @@ public class PD_General
 		// get to the game data
 		var gameData = DataController.m_instance.m_gameData;
 
-		// reset location
-		m_location = Location.Starport;
+		// reset activity
+		m_activity = Activity.Starport;
 
 		// reset coordinates (standing in front of the operations door)
 		m_coordinates = new Vector3( -35.18f, 0.0f, 20.86f );

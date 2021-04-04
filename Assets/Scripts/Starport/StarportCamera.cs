@@ -25,8 +25,19 @@ public class StarportCamera : MonoBehaviour
 
 	Vector3 m_objectToTrackPosition;
 
+	public static StarportCamera m_instance;
+
+	void Awake()
+	{
+		Debug.Log( "StarportCamera Awake" );
+
+		m_instance = this;
+	}
+
 	void OnEnable()
 	{
+		Debug.Log( "StarportCamera OnEnable" );
+
 		m_objectToTrackPosition = m_objectToTrack.position;
 	}
 

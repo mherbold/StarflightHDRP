@@ -8,14 +8,16 @@ public class IntroSkipper : MonoBehaviour
 {
 	PlayableDirector m_playableDirector;
 
-	void OnEnable()
+	void Awake()
 	{
+		Debug.Log( "IntroSkipper Awake" );
+
 		m_playableDirector = GetComponent<PlayableDirector>();
 	}
 
 	public void OnFire( InputAction.CallbackContext context )
 	{
-		if ( context.action.triggered )
+		if ( !context.canceled && context.action.triggered )
 		{
 			var time = m_playableDirector.time;
 

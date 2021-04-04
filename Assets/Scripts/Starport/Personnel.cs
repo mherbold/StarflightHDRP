@@ -191,7 +191,7 @@ public class Personnel : DoorPanelController
 			if ( m_name.Length == 0 )
 			{
 				// play a ui sound
-				PlayDeactivateSound();
+				Sounds.m_instance.PlayDeactivate();
 			}
 			else
 			{
@@ -218,7 +218,7 @@ public class Personnel : DoorPanelController
 				m_currentFileIndex = DataController.m_instance.m_playerData.m_personnel.m_personnelList.Count - 1;
 
 				// play a ui sound
-				PlayUpdateSound();
+				Sounds.m_instance.PlayUpdate();
 			}
 
 			// switch to the view file state
@@ -232,7 +232,7 @@ public class Personnel : DoorPanelController
 			}
 			else
 			{
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 		else if ( ( ch >= (char) KeyCode.Space ) && ( ch <= (char) KeyCode.Tilde ) )
@@ -243,12 +243,12 @@ public class Personnel : DoorPanelController
 			}
 			else
 			{
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 		else
 		{
-			PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 
 		m_nameInputTMP.text = m_name;
@@ -276,9 +276,6 @@ public class Personnel : DoorPanelController
 		// update the screen
 		UpdateScreenForViewFileState();
 
-		// show the delete button (but not necessarily enable it)
-		ShowDeleteButton();
-
 		// select the create button or the exit button if the create button is not enabled
 		SetCurrentButton( ButtonIsEnbled( c_createButtonIndex ) ? c_createButtonIndex : c_exitButtonIndex );
 
@@ -287,11 +284,11 @@ public class Personnel : DoorPanelController
 		{
 			if ( playDeactivateSoundInstead )
 			{
-				PlayDeactivateSound();
+				Sounds.m_instance.PlayDeactivate();
 			}
 			else
 			{
-				PlayActivateSound();
+				Sounds.m_instance.PlayActivate();
 			}
 		}
 	}
@@ -315,7 +312,7 @@ public class Personnel : DoorPanelController
 		SetCurrentButton( c_selectButtonIndex );
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
 	// call this to switch to the delete crewmember state
@@ -336,7 +333,7 @@ public class Personnel : DoorPanelController
 		SetCurrentButton( c_noButtonIndex );
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
 	// call this to switch to the give name state
@@ -353,7 +350,7 @@ public class Personnel : DoorPanelController
 		UpdateScreenForGiveNameState();
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 
 		// read input from any key on the keyboard
 		SetInputFocus( true );
@@ -380,7 +377,7 @@ public class Personnel : DoorPanelController
 		UpdateScreenForTrainCrewmemberState();
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
 	// update screen for the view file state
@@ -439,6 +436,9 @@ public class Personnel : DoorPanelController
 
 			// show the personnel file
 			ShowPersonnelFile( true );
+
+			// auto enable the delete button
+			AutoEnableDeleteButton();
 		}
 
 		// always enable the exit button
@@ -611,11 +611,8 @@ public class Personnel : DoorPanelController
 			SetCurrentButton( c_nextButtonIndex );
 		}
 
-		// show the delete button (but not necessarily enable it)
-		ShowDeleteButton();
-
 		// play a ui sound
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
 	void SelectNextFile()
@@ -632,16 +629,13 @@ public class Personnel : DoorPanelController
 			SetCurrentButton( c_previousButtonIndex );
 		}
 
-		// show the delete button (but not necessarily enable it)
-		ShowDeleteButton();
-
 		// play a ui sound
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
-	void ShowDeleteButton()
+	void AutoEnableDeleteButton()
 	{
-		// show the button
+		// show the delete button (but we might disable it)
 		ShowButton( c_deleteButtonIndex, true );
 
 		// get access to the player data
@@ -668,7 +662,7 @@ public class Personnel : DoorPanelController
 		{
 			UpdateTrainingCostText( 1 );
 
-			PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 		else
 		{
@@ -701,7 +695,7 @@ public class Personnel : DoorPanelController
 			{
 				UpdateTrainingCostText( 2 );
 
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 	}
@@ -825,7 +819,7 @@ public class Personnel : DoorPanelController
 		{
 			UpdateTrainingCostText( 5 );
 
-			PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 		else
 		{
@@ -844,7 +838,7 @@ public class Personnel : DoorPanelController
 			{
 				UpdateTrainingCostText( 4 );
 
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 			else if ( currentSkill < maximumSkill ) // check if we are still below the maximum skill points
 			{
@@ -861,13 +855,13 @@ public class Personnel : DoorPanelController
 				UpdateSkillValues();
 
 				// play a ui sound
-				PlayUpdateSound();
+				Sounds.m_instance.PlayUpdate();
 			}
 			else // the selected skill is already maxxed out
 			{
 				UpdateTrainingCostText( 3 );
 
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 	}

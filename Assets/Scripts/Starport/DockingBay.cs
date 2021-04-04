@@ -8,7 +8,6 @@ public class DockingBay : DoorPanelController
 	const int c_exitButtonIndex = 0;
 
 	[SerializeField] TextMeshProUGUI m_messageTMP;
-	[SerializeField] Astronaut m_astronaut;
 	[SerializeField] PlayableDirector m_playableDirector;
 
 	protected override void Restart()
@@ -67,9 +66,17 @@ public class DockingBay : DoorPanelController
 		// did we pass the pre-flight checks?
 		if ( preflightCheckPassed )
 		{
+			// play the transporter animation
 			m_playableDirector.Play();
 
+			// hide this panel
 			gameObject.SetActive( false );
+
+			// update the player activity
+			playerData.m_general.m_activity = PD_General.Activity.DockingBay;
+
+			// save the player data
+			DataController.m_instance.SaveActiveGame();
 		}
 	}
 

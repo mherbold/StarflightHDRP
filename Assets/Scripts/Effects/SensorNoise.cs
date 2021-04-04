@@ -17,6 +17,8 @@ public class SensorNoise : MonoBehaviour
 
 	void OnEnable()
 	{
+		Debug.Log( "SensorNoise OnEnable" );
+
 		var noise = transform.Find( "Noise" );
 
 		m_image = noise.GetComponent<Image>();

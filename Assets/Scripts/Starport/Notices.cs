@@ -167,7 +167,7 @@ class Notices
 		m_messageTMP.ForceMeshUpdate();
 
 		// play a ui sound
-		m_doorPanelController.PlayUpdateSound();
+		Sounds.m_instance.PlayUpdate();
 	}
 
 	// update which notices buttons are enabled and selected

@@ -14,13 +14,20 @@ public class RandomUVOffset : MonoBehaviour
 	float m_delayTime;
 	float m_nextUpdateTime;
 
-	void OnEnable()
+	void Awake()
 	{
+		Debug.Log( "RandomUVOffset Awake" );
+
 		var renderer = GetComponent<Renderer>();
 
 		Debug.Assert( m_materialIndex <= renderer.materials.Length );
 
 		m_material = renderer.materials[ m_materialIndex ];
+	}
+
+	void OnEnable()
+	{
+		Debug.Log( "RandomUVOffset OnEnable" );
 
 		m_delayTime = 1.0f / m_frameRate;
 

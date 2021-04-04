@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 [RequireComponent( typeof( AudioSource ) )]
 public class Astronaut : MonoBehaviour
 {
-	[SerializeField] StarportCamera m_starportCamera;
-
 	[SerializeField] float m_floorRadius = 13.25f;
 
 	[SerializeField] float m_padRadius = 5.0f;
@@ -24,12 +22,18 @@ public class Astronaut : MonoBehaviour
 	float m_currentAngle = 180.0f;
 	float m_targetAngle = 180.0f;
 
-	bool m_inputActive = true;
+	bool m_isFrozenInPlace = false;
 
-	void OnEnable()
+	public static Astronaut m_instance;
+
+	void Awake()
 	{
+		Debug.Log( "Astronaut Awake" );
+
 		m_animator = GetComponent<Animator>();
 		m_audioSource = GetComponent<AudioSource>();
+
+		m_instance = this;
 	}
 
 	void Update()
@@ -37,7 +41,7 @@ public class Astronaut : MonoBehaviour
 		var x = Mathf.RoundToInt( m_moveVector.x );
 		var y = Mathf.RoundToInt( m_moveVector.y );
 
-		if ( !m_inputActive )
+		if ( m_isFrozenInPlace )
 		{
 			x = 0;
 			y = 0;
@@ -80,7 +84,7 @@ public class Astronaut : MonoBehaviour
 
 			m_targetAngle += 180.0f;
 
-			m_targetAngle += m_starportCamera.GetCurrentAngle();
+			m_targetAngle += StarportCamera.m_instance.GetCurrentAngle();
 		}
 
 		while ( ( m_targetAngle - m_currentAngle ) > 180.0f )
@@ -128,13 +132,21 @@ public class Astronaut : MonoBehaviour
 		m_moveVector = context.ReadValue<Vector2>();
 	}
 
+	public void OnFire( InputAction.CallbackContext context )
+	{
+		if ( !context.canceled && context.action.triggered )
+		{
+			DoorPanelManager.m_instance.OpenPanel();
+		}
+	}
+
 	public void Footstep()
 	{
 		m_audioSource.Play();
 	}
 
-	public void SetInputActive( bool inputActive )
+	public void Freeze( bool freeze )
 	{
-		m_inputActive = inputActive;
+		m_isFrozenInPlace = freeze;
 	}
 }

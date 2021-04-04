@@ -11,9 +11,16 @@ public class RandomTextColor : MonoBehaviour
 
 	float m_colorChangeTimer;
 
+	void Awake()
+	{
+		Debug.Log( "RandomTextColor Awake" );
+
+		m_tmp = GetComponent<TextMeshPro>();
+	}
+
 	void OnEnable()
 	{
-		m_tmp = GetComponent<TextMeshPro>();
+		Debug.Log( "RandomTextColor OnEnable" );
 
 		m_colorChangeTimer = 0.0f;
 	}

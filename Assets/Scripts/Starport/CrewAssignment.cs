@@ -166,7 +166,7 @@ public class CrewAssignment : DoorPanelController
 
 		if ( makeNoise )
 		{
-			PlayDeactivateSound();
+			Sounds.m_instance.PlayDeactivate();
 		}
 	}
 
@@ -208,7 +208,7 @@ public class CrewAssignment : DoorPanelController
 		UpdateScreen();
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
 	// update the assigned crewmember list
@@ -296,7 +296,7 @@ public class CrewAssignment : DoorPanelController
 			UpdateAssignedCrewmemberList();
 
 			// play a sound
-			PlayUpdateSound();
+			Sounds.m_instance.PlayUpdate();
 		}
 	}
 

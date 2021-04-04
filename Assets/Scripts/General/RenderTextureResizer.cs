@@ -15,8 +15,10 @@ public class RenderTextureResizer : MonoBehaviour
 
 	Camera m_camera;
 
-	void OnEnable()
+	void Awake()
 	{
+		Debug.Log( "RenderTextureResizer Awake" );
+
 		m_camera = GetComponent<Camera>();
 	}
 

@@ -10,9 +10,16 @@ public class ActivateAtEndOfTimeline : MonoBehaviour
 	[SerializeField] GameObject[] m_gameObjectsToDisable;
 	[SerializeField] GameObject[] m_gameObjectsToEnable;
 
+	void Awake()
+	{
+		Debug.Log( "ActivateAtEndOfTimeline Awake" );
+
+		m_playableDirector = GetComponent<PlayableDirector>();
+	}
+
 	void OnEnable()
 	{
-		m_playableDirector = GetComponent<PlayableDirector>();
+		Debug.Log( "ActivateAtEndOfTimeline OnEnable" );
 
 		m_playableDirector.stopped += OnPlayableDirectorStopped;
 	}
@@ -35,6 +42,8 @@ public class ActivateAtEndOfTimeline : MonoBehaviour
 
 	void OnDisable()
 	{
+		Debug.Log( "ActivateAtEndOfTimeline OnDisable" );
+
 		m_playableDirector.stopped -= OnPlayableDirectorStopped;
 	}
 }

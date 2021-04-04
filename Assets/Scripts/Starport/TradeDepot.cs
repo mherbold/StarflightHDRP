@@ -225,7 +225,7 @@ public class TradeDepot : DoorPanelController
 				}
 
 				// play a ui sound
-				PlayDeactivateSound();
+				Sounds.m_instance.PlayDeactivate();
 			}
 			else
 			{
@@ -264,7 +264,7 @@ public class TradeDepot : DoorPanelController
 							SwitchToBuyItemState( false );
 
 							// play a ui sound
-							PlayUpdateSound();
+							Sounds.m_instance.PlayUpdate();
 						}
 					}
 				}
@@ -283,7 +283,7 @@ public class TradeDepot : DoorPanelController
 					SwitchToSellItemState( false );
 
 					// play a ui sound
-					PlayUpdateSound();
+					Sounds.m_instance.PlayUpdate();
 				}
 			}
 		}
@@ -295,7 +295,7 @@ public class TradeDepot : DoorPanelController
 			}
 			else
 			{
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 		else if ( ( ( ch >= '0' ) && ( ch <= '9' ) ) || ( ch == '.' ) )
@@ -306,12 +306,12 @@ public class TradeDepot : DoorPanelController
 			}
 			else
 			{
-				PlayErrorSound();
+				Sounds.m_instance.PlayError();
 			}
 		}
 		else
 		{
-			PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 
 		m_amountInputTMP.text = m_amount;
@@ -470,7 +470,7 @@ public class TradeDepot : DoorPanelController
 		SetInputFocus( true );
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
 	void SwitchToSellItemState( bool resetCurrentItemIndex = true )
@@ -519,7 +519,7 @@ public class TradeDepot : DoorPanelController
 		SetInputFocus( true );
 
 		// beep
-		PlayActivateSound();
+		Sounds.m_instance.PlayActivate();
 	}
 
 	void SwitchToAnalyzeItemState( bool resetCurrentItemIndex = true )
@@ -583,11 +583,11 @@ public class TradeDepot : DoorPanelController
 		// beep
 		if ( playUpdateSoundInstead )
 		{
-			PlayUpdateSound();
+			Sounds.m_instance.PlayUpdate();
 		}
 		else
 		{
-			PlayErrorSound();
+			Sounds.m_instance.PlayError();
 		}
 	}
 
@@ -611,7 +611,7 @@ public class TradeDepot : DoorPanelController
 				break;
 		}
 
-		PlayDeactivateSound();
+		Sounds.m_instance.PlayDeactivate();
 	}
 
 	// call this whenever we change state or do something that would result in something changing the data in the trade panel
@@ -927,7 +927,7 @@ public class TradeDepot : DoorPanelController
 				UpdateItemSelection();
 
 				// play a ui sound
-				PlayUpdateSound();
+				Sounds.m_instance.PlayUpdate();
 			}
 		}
 	}
@@ -965,7 +965,7 @@ public class TradeDepot : DoorPanelController
 			UpdateItemSelection();
 
 			// play a ui sound
-			PlayUpdateSound();
+			Sounds.m_instance.PlayUpdate();
 		}
 	}
 
