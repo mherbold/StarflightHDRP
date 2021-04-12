@@ -82,6 +82,7 @@ public class Starflight : MonoBehaviour
 			{
 				case PD_General.Activity.DockingBay:
 					m_dockingBay.SetActive( true );
+					DisplayPanel.m_instance.SwitchTo( DisplayPanel.Panel.Status );
 					break;
 			}
 		}
